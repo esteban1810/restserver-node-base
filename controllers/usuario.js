@@ -1,21 +1,34 @@
 class Usuario {
     usuarioGet(req, res) {
-        res.json("GET API")
+        res.json({
+            msg:"GET API - usuarioGet",
+        })
     }
 
     usuarioPost(req, res) {
-        res.json("POST API")
+        const {body} = req;
+        // console.log(body);
+        res.json({
+            msg:"POST API - usuarioPost",
+            body
+        })
     }
 
     usuarioPut(req, res) {
-        res.json("PUT API")
+        res.json({
+            msg:"PUT API - usuarioPut",
+        })
     }
 
     usuarioDelete(req, res) {
-        res.json("DELETE API")
+        res.json({
+            msg:"DELETE API - usuarioDelete",
+        })
     }
     usuarioPatch(req, res) {
-        res.json("PATCH API")
+        res.json({
+            msg:"PATCH API - usuarioPatch",
+        })
     }
 }
 

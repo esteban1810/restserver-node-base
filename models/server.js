@@ -19,6 +19,8 @@ class Server {
         // CORS
         this.app.use(cors()) // Sirve para configurar nuestras peticiones
 
+        this.app.use(express.json())
+
         // Directorio Públic
         this.app.use(express.static('public'));
     }
