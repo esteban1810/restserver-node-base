@@ -1,7 +1,12 @@
 class Usuario {
     usuarioGet(req, res) {
+        // QUERY
+        const {nombre,edad=18,sexo='Femenino'} = req.query;
         res.json({
             msg:"GET API - usuarioGet",
+            nombre,
+            edad,
+            sexo
         })
     }
 
@@ -15,8 +20,10 @@ class Usuario {
     }
 
     usuarioPut(req, res) {
+        const {id} = req.params;
         res.json({
             msg:"PUT API - usuarioPut",
+            id
         })
     }
 

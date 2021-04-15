@@ -6,7 +6,7 @@ const user = new Usuario()
 
 app.get('/',user.usuarioGet)
 app.post('/',user.usuarioPost)
-app.put('/',user.usuarioPut)
+app.put('/:id',user.usuarioPut) // Parametro
 app.delete('/',user.usuarioDelete)
 app.patch('/',user.usuarioPatch)
 
