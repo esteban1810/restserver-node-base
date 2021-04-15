@@ -1,4 +1,5 @@
 const express = require('express');
+const cors  = require('cors')
 
 class Server {
     constructor(){
@@ -13,6 +14,11 @@ class Server {
     }
 
     middlewares(){ // LOS MIDDLEWARES SE EJECUTAN ANTES DE RESPONDER AL USUARIO
+
+        // CORS
+        this.app.use(cors()) // Sirve para configurar nuestras peticiones
+
+        // Directorio Públic
         this.app.use(express.static('public'));
     }
 
